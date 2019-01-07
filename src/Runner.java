@@ -8,13 +8,18 @@ public class Runner {
         for (int num:testArr)
             System.out.print(num+" ");
         System.out.println();
-        Swap.bubbleSort(testArr);
+        utils.bubbleSort(testArr);
         System.out.print("After: ");
         for (int num:testArr)
             System.out.print(num+ " ");
         System.out.println();
-        System.out.println("Is the list sorted? " +Swap.isSorted(testArr));
-        System.out.println("Are the sums the same? " +Swap.checkSum(before, testArr));
+        System.out.println("Is the list sorted? " +utils.isSorted(testArr));
+        System.out.println("Are the sums the same? " +utils.checkSum(before, testArr));
+
+        long time= System.nanoTime();
+        utils.bubbleSort(testArr);
+        time= System.nanoTime()-time;
+        System.out.println("Time Taken: " + time);
 
     }
 }
