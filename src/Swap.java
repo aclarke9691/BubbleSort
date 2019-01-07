@@ -25,4 +25,43 @@ public class Swap {
 
         }
     }
+
+    public static boolean isSorted(int [] arr)
+    {
+        for (int i=0; i<arr.length-1; i++)
+        {
+            if (arr[i] > arr[i+1])
+            {
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean checkSum(int[]before, int[]after)
+    {
+        int a=0;
+        int b=0;
+        if(before.length!=after.length)
+        {
+            return false;
+        }
+        else
+        {
+            for(int i=0; i<before.length; i++)
+            {
+                a=a+ before[i];
+                b=b+ after[i];
+            }
+            if(a!=b)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    }
+
 }
